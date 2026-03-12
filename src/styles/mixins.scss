@@ -1,0 +1,9 @@
+@use "sass:math";
+
+@function toRem($px, $current: 16) {
+  @return math.div($px, $current) + rem;
+}
+
+@function toEm($px, $current: 16) {
+  @return math.div($px, $current) + em;
+}

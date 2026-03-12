@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Klein';
+  src: url('../../public/fonts/Klein/Klein-Regular.woff2') format('woff2'),
+  url('../../public/fonts/Klein/Klein-Regular.woff') format('woff'),
+  url('../../public/fonts/Klein/Klein-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Klein';
+  src: url('../../public/fonts/Klein/Klein-Medium.woff2') format('woff2'),
+  url('../../public/fonts/Klein/Klein-Medium.woff') format('woff'),
+  url('../../public/fonts/Klein/Klein-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Klein';
+  src: url('../../public/fonts/Klein/Klein-Bold.woff2') format('woff2'),
+  url('../../public/fonts/Klein/Klein-Bold.woff') format('woff'),
+  url('../../public/fonts/Klein/Klein-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
