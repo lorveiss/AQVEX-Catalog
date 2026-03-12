@@ -1,23 +1,20 @@
 @use "reset";
 @use "fonts";
+@use "variables";
+@use "common";
 
 body {
   font-family: Klein, sans-serif;
   font-size: toRem(18);
   line-height: 1.4;
+  letter-spacing: -2%;
   color: $text-primary;
   overflow-x: hidden;
   position: relative;
 }
 
-%container {
-  max-width: toRem($container-width);
-  margin: 0 auto;
-  padding: 0 toRem($container-padding);
-}
-
 .wrapper {
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;

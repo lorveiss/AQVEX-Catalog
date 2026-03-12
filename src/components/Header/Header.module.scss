@@ -1,0 +1,18 @@
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba($bg-main, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.container {
+  @extend %container;
+  min-height: toRem(80);
+  display: flex;
+  align-items: center;
+  padding-top: toRem(10);
+  padding-bottom: toRem(10);
+}

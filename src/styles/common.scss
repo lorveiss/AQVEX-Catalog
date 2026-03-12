@@ -1,0 +1,8 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+%container {
+  max-width: toRem($container-width);
+  margin: 0 auto;
+  padding: 0 toRem($container-padding);
+}
