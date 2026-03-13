@@ -1,3 +1,9 @@
+/**
+ * Формирует массив номеров страниц для пагинации с добавлением «...» (многоточия).
+ * @param current Текущая активная страница.
+ * @param total Общее количество страниц.
+ * @returns Массив, содержащий номера страниц и точки.
+ */
 export const getPaginationRange = (current: number, total: number) => {
   const range: (number | string)[] = [];
   const delta = 2;

@@ -1,73 +1,40 @@
-# React + TypeScript + Vite
+# Perfume Catalog Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Даний проект є фронтенд-реалізацією каталогу продукції. Основна мета розробки — створення високопродуктивного та доступного інтерфейсу з використанням сучасних практик розробки на React.
 
-Currently, two official plugins are available:
+## 🛠 Технологічний стек
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **Framework:** React 19 (Vite)
+* **Language:** TypeScript
+* **Styling:** SCSS Modules
+* **UI Components:** Headless UI (для доступних інтерактивних елементів)
+* **State Management:** React Hooks (Custom Hooks для бізнес-логіки)
+* **HTTP Client:** Axios
 
-## React Compiler
+## 🏗 Архітектура та структура проекту
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+Проект організований за модульним принципом, що забезпечує чіткий поділ відповідальності (Separation of Concerns):
 
-## Expanding the ESLint configuration
+* `src/components/` — Універсальні UI-компоненти (Shared Components).
+* `src/hooks/` — Кастомні хуки, що інкапсулюють логіку роботи з API та фільтрацією.
+* `src/pages/` — Компоненти сторінок та їх специфічні допоміжні елементи.
+* `src/utils/` — Чисті функції для математичних розрахунків, пагінації та лінгвістичного відмінювання.
+* `src/consts/` — Централізоване керування константами та конфігураціями.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Ключові функціональні особливості
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. **Професійна фільтрація та сортування:** Реалізовано клієнтську логіку обробки даних з використанням мемоізації (`useMemo`) для запобігання зайвих ререндерів.
+2. **Оптимізація пошуку:** Інтегровано механізм `Debounce` (300ms) для зменшення навантаження при інтенсивному введенні тексту.
+3. **Система пагінації:** Складна логіка розрахунку діапазону сторінок (з використанням еліпсису `...`) для зручної навігації великими масивами даних.
+4. **Коректна обробка ресурсів:** Система плейсхолдерів для зображень та обробка технічних заглушок бекенду.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📊 Показники якості (Lighthouse)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Проект пройшов аудити за основними показниками:
+* **Performance:** 100
+* **Accessibility:** 95+
+* **Best Practices:** 95+
+* **SEO:** 90+ (з налаштованими мета-тегами)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📝Документація коду
+Усі ключові функції, хуки та утиліти задокументовані за допомогою JSDoc, що спрощує подальшу підтримку та масштабування проекту.

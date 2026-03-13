@@ -2,6 +2,11 @@ import { useState, useEffect, useCallback } from 'react';
 import { getProducts } from '@/api/products';
 import type { Product } from '@/types/product';
 
+/**
+ * Функция для получения списка товаров из API.
+ * Управляет состояниями загрузки и ошибки, а также сохраняет полученные данные.
+ * @returns {products, isLoading, error, refetch} Объект со списком товаров и методами управления загрузкой.
+ */
 export const useProducts = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);

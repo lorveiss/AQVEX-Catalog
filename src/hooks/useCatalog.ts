@@ -6,6 +6,17 @@ import type { SortOption } from '@/components/SortSelect/SortSelect';
 import { filterProducts, sortProducts } from '@/utils/productFilters';
 import { useDebounce } from '@/hooks/useDebounce';
 
+/**
+ * Хук для управления логикой каталога.
+ * Обеспечивает дебаунс поиска, сортировки и расчет пагинации.
+ * * @param products — Исходный массив товаров для обработки.
+ * @returns {Object} Объект, содержащий:
+ * - searchQuery, sortBy, currentPage: Текущие состояния фильтров.
+ * - processedProducts: Полный список отфильтрованных и отсортированных товаров.
+ * - currentItems: Список товаров только для текущей страницы.
+ * - totalPages: Общее количество страниц.
+ * - handleSearchChange, handleSortChange, setCurrentPage: Методы управления каталогом.
+ */
 export const useCatalog = (products: Product[] = []) => {
   const [searchQuery, setSearchQuery] = useState('');
   const debouncedSearch = useDebounce(searchQuery, 300);

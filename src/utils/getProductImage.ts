@@ -1,3 +1,7 @@
+/**
+ * Возвращает путь к изображению товара или заглушку,
+ * если изображение отсутствует или является технической заглушкой бэкенда.
+ */
 const PLACEHOLDER_IMAGE = '/images/common/product-placeholder-image.jpg';
 
 export const getProductImage = (imageName: string | null): string => {
