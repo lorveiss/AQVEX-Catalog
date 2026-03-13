@@ -1,0 +1,60 @@
+.price {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.oldPrice {
+  color: $text-secondary;
+  font-size: $fs-22;
+  font-weight: 500;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    width: toRem(40);
+    height: toRem(2);
+    background-color: $system-red;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:not(:last-child) {
+    margin-right: toRem(8);
+  }
+}
+
+.currentPrice {
+  background: $blue-gradient;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: $fs-22;
+  font-weight: 500;
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: toRem(20);
+  }
+}
+
+.discountBadge {
+  color: $text-inverted;
+  font-weight: 700;
+  font-size: $fs-14;
+  position: relative;
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  img {
+    position: absolute;
+    transform: translateY(-10%);
+    left: toRem(-11);
+  }
+}
