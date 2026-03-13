@@ -14,7 +14,7 @@ export const useProducts = () => {
       const data = await getProducts();
       setProducts(data);
     } catch (err) {
-      setError('Не вдалося завантажити товари. Спробуйте оновити сторінку.');
+      setError('Не удалось загрузить товары. Попробуйте обновить страницу.');
     } finally {
       setIsLoading(false);
     }

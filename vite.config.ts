@@ -21,4 +21,13 @@ export default defineConfig({
       },
     },
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://ip-194-99-21-145-139178.vps.hosted-by-mvps.net',
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
 });
