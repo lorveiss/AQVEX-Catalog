@@ -1,0 +1,24 @@
+.controls {
+  &:not(:last-child) {
+    margin-bottom: toRem(20);
+  }
+}
+
+.searchRow {
+  display: flex;
+  justify-content: flex-end;
+  &:not(:last-child) {
+    margin-bottom: toRem(20);
+  }
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.count {
+  font-size: $fs-16;
+  color: $text-secondary;
+}
