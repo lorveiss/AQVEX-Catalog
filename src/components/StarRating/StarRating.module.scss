@@ -1,0 +1,29 @@
+.rating {
+  display: flex;
+  align-items: center;
+  gap: toRem(8);
+  line-height: 1;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star {
+  transition: opacity 0.2s ease;
+
+  &.starEmpty {
+    opacity: 0.3;
+  }
+
+  &.starFilled {
+    opacity: 1;
+  }
+}
+
+.reviewsCount {
+  color: $text-primary;
+  font-size: $fs-14;
+}
