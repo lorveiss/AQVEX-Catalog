@@ -1,0 +1,31 @@
+.searchWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: toRem(450);
+  height: toRem(44);
+}
+
+.searchIcon {
+  position: absolute;
+  left: toRem(16);
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  padding: toRem(12) toRem(16) toRem(12) toRem(50); // Відступ зліва під іконку
+  background-color: rgb(246, 247, 249);
+  border: toRem(1) solid transparent;
+  border-radius: toRem(12);
+  font-size: toRem(16);
+  color: $text-primary;
+  transition: all 0.2s ease;
+
+  &::placeholder {
+    color: $text-primary;
+    font-size: $fs-18;
+  }
+}
