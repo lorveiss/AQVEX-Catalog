@@ -1,0 +1,4 @@
+.container {
+  @extend %container;
+  padding-bottom: toRem(65);
+}

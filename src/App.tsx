@@ -1,9 +1,12 @@
 import { MainLayout } from '@/components/Layout/MainLayout';
+import { CatalogPage } from '@/pages/CatalogPage/CatalogPage';
 
 function App() {
   return (
     <div>
-      <MainLayout>/</MainLayout>
+      <MainLayout>
+        <CatalogPage />
+      </MainLayout>
     </div>
   );
 }
