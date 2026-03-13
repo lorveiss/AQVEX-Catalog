@@ -1,0 +1,117 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: $bg-main;
+  max-width: toRem(345);
+  width: 100%;
+}
+
+.skeletonItem {
+  background: #f0f2f5;
+  background: linear-gradient(90deg, #f0f2f5 25%, #e2e8f0 50%, #f0f2f5 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+  border-radius: toRem(8);
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.imageContainer {
+  aspect-ratio: 1 / 1;
+  border-radius: toRem(16);
+  overflow: hidden;
+  margin-bottom: toRem(20);
+
+  .imageShimmer {
+    @extend .skeletonItem;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  gap: toRem(20);
+  margin-bottom: toRem(32);
+
+  .price {
+    height: toRem(22);
+    width: toRem(100);
+  }
+
+  .badge {
+    height: toRem(20);
+    width: toRem(45);
+    border-radius: toRem(4);
+  }
+}
+
+.nameWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: toRem(8);
+  margin-bottom: toRem(24);
+
+  .skeletonItem {
+    height: toRem(18);
+    width: 100%;
+  }
+
+  .shortName {
+    width: 60%;
+  }
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: toRem(8);
+  margin-bottom: toRem(32);
+
+  .stars {
+    height: toRem(14);
+    width: toRem(80);
+  }
+
+  .reviews {
+    height: toRem(14);
+    width: toRem(40);
+  }
+}
+
+.meta {
+  padding-left: toRem(24);
+  margin-bottom: toRem(32);
+
+  .metaText {
+    height: toRem(14);
+    width: toRem(120);
+  }
+}
+
+.actionsRow {
+  display: flex;
+  align-items: center;
+  gap: toRem(8);
+
+  .select {
+    height: toRem(50);
+    width: toRem(123);
+    border-radius: toRem(15);
+  }
+
+  .button {
+    height: toRem(50);
+    flex: 1;
+    border-radius: toRem(15);
+  }
+}
