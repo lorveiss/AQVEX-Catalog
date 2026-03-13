@@ -1,0 +1,31 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, toRem(345));
+  gap: toRem(20);
+  justify-content: space-around;
+
+  &:not(:last-child) {
+    margin-bottom: toRem(32);
+  }
+}
+
+.paginationWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.errorBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: toRem(60) 0;
+  text-align: center;
+  gap: toRem(20);
+
+  p {
+    color: $text-secondary;
+    font-weight: 500;
+  }
+}
