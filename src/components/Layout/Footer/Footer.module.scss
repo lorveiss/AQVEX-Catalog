@@ -1,3 +1,19 @@
+.footer {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: toRem(1);
+    background-color: $border;
+    transform: scaleY(0.15);
+    transform-origin: top;
+  }
+}
+
 .container {
   @extend %container;
   padding-top: toRem(20);
@@ -5,6 +21,13 @@
   min-height: toRem(40);
   display: flex;
   justify-content: space-between;
+  gap: toRem(15);
+
+  @media (max-width: toEm(767.98)) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .content {
@@ -21,7 +44,7 @@
 
 .copyrights {
   color: $text-secondary;
-  font-size: toRem(14);
+  font-size: $fs-14;
 }
 
 .payments {
