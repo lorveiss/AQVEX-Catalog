@@ -1,0 +1,44 @@
+.button {
+  height: toRem(50);
+  padding: toRem(12) toRem(20);
+  border-radius: toRem(15);
+  border: none;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: toRem(12);
+
+  font-weight: 700;
+  line-height: 1;
+  transition: all 0.2s ease;
+
+  &.iconOnly {
+    padding: toRem(10);
+  }
+}
+
+.primary {
+  background-color: $bg-accent-light-blue;
+
+  &:hover {
+    background-color: color-mix(in srgb, $bg-accent-light-blue, black 2%);
+    transform: translateY(toRem(-1));
+  }
+
+  &:active {
+    background-color: color-mix(in srgb, $bg-accent-light-blue, black 5%);
+    transform: translateY(0);
+  }
+}
+
+.transparent {
+  background-color: transparent;
+  padding: toRem(10);
+  height: auto;
+  min-width: auto;
+}
+
+.fullWidth {
+  width: 100%;
+}
