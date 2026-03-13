@@ -1,0 +1,91 @@
+.selectWrapper {
+  position: relative;
+}
+
+.volumeSelect {
+  position: relative;
+  height: toRem(50);
+  width: toRem(123);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: toRem(10) toRem(20);
+
+  font-weight: 500;
+  color: $text-primary;
+
+  background: $bg-main;
+  border: toRem(2) solid $border;
+  border-radius: toRem(15);
+
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    outline: none;
+  }
+
+  &[data-focus] {
+    outline: auto;
+  }
+
+  &:hover {
+    border-color: color-mix(in srgb, $border, black 10%);
+  }
+
+  &.isOpen {
+    border-color: $accent-blue;
+  }
+}
+
+.selectIcon {
+  position: absolute;
+  top: 50%;
+  right: toRem(20);
+  pointer-events: none;
+  transition: transform 0.3s ease;
+  transform: translateY(-50%) rotate(0deg);
+}
+
+.volumeSelect.isOpen {
+  .selectIcon {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+.optionsList {
+  position: absolute;
+  bottom: 110%;
+  left: 0;
+  width: 100%;
+  background: $bg-main;
+  border-radius: toRem(12);
+  box-shadow: 0 toRem(4) toRem(20) rgba(0, 0, 0, 0.08);
+  border: toRem(1) solid $border;
+  overflow: hidden;
+  z-index: 10;
+  padding: toRem(4) 0;
+}
+
+.option {
+  padding: toRem(10) toRem(16);
+  cursor: pointer;
+  font-size: $fs-14;
+  transition: background 0.2s ease;
+
+  &.active {
+    background-color: #f5f9ff;
+  }
+
+  &.selected {
+    color: $accent-blue;
+    font-weight: 600;
+  }
+
+  &.disabled {
+    color: $text-secondary;
+    opacity: 0.5;
+    cursor: not-allowed;
+    text-decoration: line-through;
+    pointer-events: none;
+  }
+}
