@@ -1,0 +1,55 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: toRem(12);
+}
+
+.pageList {
+  display: flex;
+  align-items: center;
+  gap: toRem(12);
+}
+
+.pageItem {
+  background: transparent;
+  border: toRem(1) solid transparent;
+  min-width: toRem(46);
+  height: toRem(46);
+  font-size: $fs-16;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: toRem(12);
+  transition: all 0.2s ease;
+
+  &:hover:not(.active):not(.ellipsis) {
+    color: $accent-blue;
+  }
+
+  &.active {
+    border-color: $accent-blue;
+    color: $text-primary;
+  }
+
+  &.ellipsis {
+    cursor: default;
+    border: none;
+  }
+}
+
+.arrow {
+  opacity: 1;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:last-of-type {
+    transform: scaleX(-1);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
