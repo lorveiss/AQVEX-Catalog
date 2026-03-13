@@ -2,11 +2,16 @@
 
 // Background colors
 $bg-main: rgb(255, 255, 255);
+$system-red: rgb(255, 39, 65);
+$accent-blue: rgb(67, 160, 253);
 $bg-accent-light-blue: rgb(232, 244, 255);
+$border: rgb(235, 235, 235);
+$blue-gradient: linear-gradient(90.00deg, rgb(0, 49, 128), rgb(34, 135, 237));
 
-// Colors
+// Text Colors
 $text-primary: rgb(24, 42, 66);
 $text-secondary: rgb(128, 144, 164);
+$text-inverted: rgb(255, 255, 255);
 
 // Font sizes
 $fs-14: toRem(14);
@@ -15,5 +20,5 @@ $fs-18: toRem(18);
 $fs-22: toRem(22);
 
 // Wrapper
-$container-width: 1450;
+$container-width: 1480;
 $container-padding: 15;
