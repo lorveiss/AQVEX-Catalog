@@ -1,0 +1,81 @@
+.wrapper {
+  position: relative;
+  width: fit-content;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: toRem(8);
+  background: transparent;
+  border: none;
+  padding: toRem(4) 0;
+  font-size: $fs-16;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:focus {
+    outline: none;
+  }
+
+  &[data-focus] {
+    outline: auto;
+  }
+
+  &:hover {
+    color: $accent-blue;
+  }
+}
+
+.chevron {
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+
+  img {
+    width: toRem(12);
+    height: auto;
+    opacity: 0.4;
+  }
+}
+
+.button[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
+}
+
+.options {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: toRem(200);
+  background: $bg-main;
+  border-radius: toRem(12);
+  box-shadow: 0 toRem(10) toRem(25) rgba(0, 0, 0, 0.1);
+  padding: toRem(8);
+  z-index: 100;
+  overflow: hidden;
+  border: toRem(1) solid #f3f5f7;
+}
+
+.option {
+  padding: toRem(10) toRem(14);
+  font-size: $fs-16;
+  border-radius: toRem(8);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #4a5568;
+
+  &.focus {
+    background-color: #f7fafc;
+    color: $accent-blue;
+    outline: none;
+  }
+
+  &.selected {
+    background-color: color-mix(in srgb, $accent-blue, transparent 90%);
+    color: $accent-blue;
+    font-weight: 600;
+  }
+}
